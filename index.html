@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidariedade Conecta - Apoio a ONGs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Marco Estrutural: Cabeçalho -->
+    <header>
+        <div class="logo">Solidariedade Conecta</div>
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Marco Estrutural: Conteúdo Principal -->
+    <main id="inicio">
+        <section class="hero">
+            <h1>Transformando Vidas no Terceiro Setor</h1>
+            <p>Conectamos voluntários e recursos a organizações sociais para ampliar o impacto comunitário.</p>
+            <button aria-label="Quero ser voluntário" onclick="abrirModal()">Quero Ser Voluntário</button>
+        </section>
+
+        <section id="sobre" class="content-section">
+            <h2>Quem Somos</h2>
+            <p>Ajudamos instituições do terceiro setor a digitalizarem a sua presença e captarem recursos de forma transparente e segura.</p>
+        </section>
+    </main>
+
+    <!-- Modal de Interação (Exemplo de Acessibilidade WAI-ARIA) -->
+    <div id="modalVoluntario" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" style="display: none;">
+        <div class="modal-conteudo">
+            <h3 id="modal-titulo">Inscrição de Voluntário</h3>
+            <form>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" aria-required="true" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" aria-required="true" required>
+
+                <button type="submit">Enviar Inscrição</button>
+                <button type="button" onclick="fecharModal()">Fechar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Marco Estrutural: Rodapé -->
+    <footer>
+        <p>&copy; 2026 Solidariedade Conecta. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
